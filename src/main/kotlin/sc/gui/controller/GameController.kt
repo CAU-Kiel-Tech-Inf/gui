@@ -199,7 +199,7 @@ class GameController : Controller() {
                 ========================================================
             """.trimIndent())
             /**/
-            throw (InvalidMoveException("the hell?"))
+            //throw (InvalidMoveException("the hell?"))
 
             // I don't know why orderedColors becomes an empty array and results in CurrentColor being inaccessible (throwing error) when the game ended,
             // but this is how we can avoid it for now TODO("fix this in the plugin")

@@ -86,7 +86,7 @@ class ControllingClient(host: String, port: Int) {
     private val adminListener: AdminListener
 
     private val lobby: LobbyClient = try {
-        LobbyClient(host, port)
+        LobbyClient(Configuration.getXStream(), sc.plugin2021.util.Configuration.classesToRegister, host, port)
     } catch (e: ConnectException) {
         logger.error("Could not connect to Server: " + e.message)
         exitProcess(1)
